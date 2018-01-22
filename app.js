@@ -18,7 +18,8 @@ var commentRoutes 	 = require("./routes/comments"),
 	indexRoutes 	 = require("./routes/index")
 
 var assert = require("assert");
-mongoose.connect("mongodb://localhost/yelp_camp_v8");
+var Databaseurl="mongodb://localhost";//set database-url to database, in this case local host
+mongoose.connect("Databaseurl");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine","ejs");
 app.use(express.static(__dirname+"/public"));
